@@ -1,0 +1,50 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+a, a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.wrapper .row {
+    display: flex;
+    justify-content: center;
+}
+
+h1.logo {
+    width: 500px;
+    height: 500px;
+    background: transparent url('bg.jpg') no-repeat center center;
+    background-size: cover;
+    text-indent: -9999px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links li {
+    margin: 0 1rem;
+}
+
+.social-links i.fab {
+    margin-right: 0.5rem;
+}
