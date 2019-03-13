@@ -14,7 +14,17 @@
     <title>Gigante Portugal</title>
     <link rel="stylesheet" href="assets/reset.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    crossorigin=""></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/main.css">
+    <link rel="shortcut icon" href="images/logo-gigantes.jpg" type="image/x-icon">
 </head>
 <body>
 
@@ -23,18 +33,39 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<div class="wrapper">
-    <div class="row">
-        <h1 class="logo">
-            Gigante Portugal
-        </h1>
+<header class="header">
+    <h1 class="logo">
+        <img src="images/logo-gigantes.jpg" alt="Logo Gigantes Portugal">
+    </h1>
+</header>
+
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <ul class="social-links">
+                <li><a href="//twitter.com/gigantedoporto" target="_blank"><i class="fab fa-twitter-square"></i> Twitter</a></li>
+                <li><a href="//instagram.com/giganteportugal" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+            </ul>
+        </div>
+        <div class="row">
+            <div id="members-map"></div>
+        </div>
+        <div class="row">
+            <h2 class="section-title"><span class="cruz-de-malta">✠</span> Conheça os Gigantes</h2>
+            <div class="members-list"></div>
+        </div>
     </div>
-    <div class="row">
-        <ul class="social-links">
-            <li><a href="//twitter.com/gigantedoporto" target="_blank"><i class="fab fa-twitter-square"></i> Twitter</a></li>
-            <li><a href="//instagram.com/giganteportugal" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-        </ul>
+</main>
+
+<footer>
+    <div class="footer">
+        <p class="credits">&copy; 2019 - Gigantes de Portugal. Todos os direitos reservados.</p>
     </div>
-</div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="assets/map.js"></script>
 </body>
 </html>
