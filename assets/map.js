@@ -1,6 +1,6 @@
 var lat = 40.6455693;
 var lng = -8.6444055;
-var zoom = 7;
+var zoom = 8;
 
 var map = L.map('members-map').setView([lat, lng], zoom);
 
@@ -39,6 +39,54 @@ var members = [
         'lat': 41.0330526,
         'lng': -8.6463157
     },
+    {
+        'name': 'Elias Velloso',
+        'avatar': 'elias-velloso.png',
+        'lat': 38.7078235,
+        'lng': -9.3554862
+    },
+    {
+        'name': 'Leandro Leão',
+        'avatar': 'leandro-leao.png',
+        'lat': 41.2359748,
+        'lng': -8.6590761
+    },
+    {
+        'name': 'Gabriel Lisboa',
+        'avatar': 'gabriel-lisboa.png',
+        'lat': 41.1735822,
+        'lng': -8.5626299
+    },
+    {
+        'name': 'Lucas Novás',
+        'avatar': 'lucas-novas.png',
+        'lat': 41.1735822,
+        'lng': -8.5626299
+    },
+    {
+        'name': 'Gabriel Lourenço',
+        'avatar': 'gabriel-lourenco.png',
+        'lat': 40.6566749,
+        'lng': -7.9203585
+    },
+    {
+        'name': 'Gabriel Dutra',
+        'avatar': 'gabriel-dutra.png',
+        'lat': 41.1700134,
+        'lng': -8.5691259
+    },
+    {
+        'name': 'Marcelo Crisio',
+        'avatar': 'marcelo-crisio.png',
+        'lat': 41.1267875,
+        'lng': -8.6078282
+    },
+    {
+        'name': 'Gabriel Reis',
+        'avatar': 'gabriel-reis.png',
+        'lat': 41.1813508,
+        'lng': -8.6954337
+    }
 ];
 
 const membersList = document.querySelector('.members-list');
@@ -59,8 +107,8 @@ for(var i = 0; i < members.length; i++) {
     .bindPopup(info);
 
     memberContent += `<div class="member-item">
-        <img class="member-avatar" src="images/members/${members[i].avatar}" />
-        <h3 class="member-name">${members[i].name}</h3>
+        <img class="member-avatar" src="images/members/${members[i].avatar}" alt="${members[i].name}" title="${members[i].name}" />
+        <h3 class="member-name"><span class="cruz-de-malta">✠</span> ${members[i].name}</h3>
     </div>`;
 }
 
