@@ -98,9 +98,10 @@ for(var i = 0; i < members.length; i++) {
     var info = `<h5 class="member-name">${members[i].name}</h5>
     <div class="member-avatar" style="background-image: url(images/members/${members[i].avatar})"></div>`;
 
-    var memberIcon = L.icon({
-        iconUrl: 'images/members/' + members[i].avatar,
-        iconSize:     [32, 32], // size of the icon
+    var memberIcon = L.divIcon({
+        html: `<div class="icon-marker"><img src="images/members/${members[i].avatar}" /></div>`,
+        className: 'image-icon',
+        iconSize:     [58, 58], // size of the icon
         iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
         popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
     });
