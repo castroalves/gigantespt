@@ -95,8 +95,7 @@ let memberContent = '';
 // Renders people on map
 for(var i = 0; i < members.length; i++) {
 
-    var info = `<h5 class="member-name">${members[i].name}</h5>
-    <div class="member-avatar" style="background-image: url(images/members/${members[i].avatar})"></div>`;
+    var info = `<h5 class="member-name">${members[i].name}</h5>`;
 
     var memberIcon = L.divIcon({
         html: `<div class="icon-marker"><img src="images/members/${members[i].avatar}" /></div>`,
