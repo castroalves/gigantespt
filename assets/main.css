@@ -84,8 +84,8 @@ h1.logo img {
 } */
 
 #members-map .icon-marker {
-    width: 58px !important;
-    height: 58px !important;
+    width: 46px !important;
+    height: 46px !important;
     border-radius: 50% 50% 50% 0;
     transform: rotate(-45deg);
     background-color: black;
@@ -96,8 +96,8 @@ h1.logo img {
 }
   
 #members-map .image-icon img {
-    height: 48px !important;
-    width: 48px !important;
+    height: 36px !important;
+    width: 36px !important;
     border-radius: 50%;
     transform: rotate(45deg);
     margin: 5px 0 0 5px;

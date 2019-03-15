@@ -100,7 +100,7 @@ for(var i = 0; i < members.length; i++) {
     var memberIcon = L.divIcon({
         html: `<div class="icon-marker"><img src="images/members/${members[i].avatar}" /></div>`,
         className: 'image-icon',
-        iconSize:     [58, 58], // size of the icon
+        iconSize:     [46, 46], // size of the icon
         iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
         popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
     });
