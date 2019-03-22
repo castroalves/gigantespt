@@ -1,3 +1,9 @@
+Parse.serverURL = 'https://gigantespt.back4app.io';
+Parse.initialize(
+    'XcJbUtPYC1QZNWPMSFWIsFgOHU0Lzx8RMvaRqfkA',
+    'X2eB9GDDa4Aar6NPwWnDWcXF1p6X7e0Q5YQM43RA',
+);
+
 Parse.Cloud.run('getSupporters').then((members) => {
     renderMap(members);
 });
