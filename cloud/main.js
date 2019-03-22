@@ -4,7 +4,7 @@ Parse.Cloud.define("getSupporters", function(request, response) {
     const query = new Parse.Query(Supporter);
 
     query
-        .find()
+        .find({ useMasterKey: true })
         .then(
             (results) => {
 
