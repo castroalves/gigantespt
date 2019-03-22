@@ -1,41 +1,6 @@
-Parse.serverURL = 'https://gigantespt.back4app.io';
-Parse.initialize(
-    'XcJbUtPYC1QZNWPMSFWIsFgOHU0Lzx8RMvaRqfkA',
-    'X2eB9GDDa4Aar6NPwWnDWcXF1p6X7e0Q5YQM43RA',
-);
-
-let members = [];
-
-const Supporter = Parse.Object.extend('Supporter');
-const query = new Parse.Query(Supporter);
-
-query
-    .find()
-    .then(
-        (results) => {
-
-            results.forEach(function(item) {
-                
-                let photo = item.get('photo');
-                let location = item.get('location');
-                
-                members.push({
-                    'name': item.get('firstName') + ' ' + item.get('lastName'),
-                    'avatar': photo.url(),
-                    'lat': location.latitude,
-                    'lng': location.longitude,
-                });
-
-            });
-
-            renderMap(members);
-
-        }, 
-        (error) => {
-            if (typeof document !== 'undefined') document.write(`Error while fetching Supporter: ${JSON.stringify(error)}`);
-            console.error('Error while fetching Supporter', error);
-        }
-    );
+Parse.Cloud.run('getSupporters').then((members) => {
+    renderMap(members);
+});
 
 function renderMap(members) {
 
